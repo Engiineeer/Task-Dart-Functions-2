@@ -1,3 +1,39 @@
+void main() {
+  printName();
+  print(printAge(1992));
+  printHello("Saud", "fr");
+  printMax(3, 5);
+}
+
+void printName() {
+  print("Saud");
+}
+
+int printAge(int birthYear) {
+  int age;
+  age = 2022 - birthYear;
+  return age;
+}
+
+void printHello(String name, String language) {
+  if (language == "en") {
+    print("Hello $name");
+  } else if (language == "es") {
+    print("Hola $name");
+  } else if (language == "fr") {
+    print("Bonjour $name");
+  } else {
+    print("Merhaba $name");
+  }
+}
+
+void printMax(int num1, int num2) {
+  if (num1 > num2) {
+    print(num1);
+  } else {
+    print(num2);
+  }
+}
 /**
  * Task 1:
  * Create a function called `printName`

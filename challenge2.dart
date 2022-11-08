@@ -1,3 +1,10 @@
+void main() {
+  greet("Saud");
+  print(isOdd(6));
+  print(oddsSmallerThan(30));
+  print(squareOrDouble(8));
+}
+
 /**
  * greet(name):
  * - receives a name,
@@ -7,7 +14,7 @@
  * greet("Hamza") => prints "Hello Hamza"
  */
 void greet(String name) {
-  // Your code here
+  print("Hello $name");
 }
 
 /**
@@ -20,7 +27,11 @@ void greet(String name) {
  * isOdd(10) -> false
  */
 bool isOdd(int n) {
-  // Your code here
+  if (n % 2 == 0) {
+    return false;
+  } else {
+    return true;
+  }
 }
 
 /**
@@ -29,11 +40,22 @@ bool isOdd(int n) {
  * - returns the number of ODD numbers smaller than n.
  *
  * e.g.
- * oddsSmallerThan(7) -> 3
+ * oddsSmallerThan(1) -> 0
+ * oddsSmallerThan(2) -> 0
+ * oddsSmallerThan(3) -> 1
+ * oddsSmallerThan(4) -> 1
+ * oddsSmallerThan(5) -> 2
+ * oddsSmallerThan(10) -> 4
  * oddsSmallerThan(15) -> 7
  */
 int oddsSmallerThan(int n) {
-  // Your code here
+  int total = 0;
+  for (var i = 0; i < n; i++) {
+    if (i % 2 != 0) {
+      total++;
+    }
+  }
+  return total;
 }
 
 /**
@@ -47,5 +69,9 @@ int oddsSmallerThan(int n) {
  * squareOrDouble(9) -> 81
  */
 int squareOrDouble(int n) {
-  // Your code here
+  if (isOdd(n)) {
+    return n * n;
+  } else {
+    return n * 2;
+  }
 }
